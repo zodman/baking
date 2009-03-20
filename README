@@ -1,5 +1,6 @@
 
 small python script for do a remote bake to foresight repos
+need the machine with access to fdev shell
 
 needs pynotify
 sudo conary update notify-python=@fl:2-devel
