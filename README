@@ -1,0 +1,5 @@
+
+small python script for do a remote bake to foresight repos
+
+needs pynotify
+sudo conary update notify-python=@fl:2-devel
