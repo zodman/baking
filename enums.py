@@ -14,7 +14,11 @@ REGEX="(?P<job>\w*)\s+(?P<state>\w*)\s+(?P<time>\d*\s\w*\s\w*)\s+"
 def get_info(query):
     query = query.replace("\n","")
     obj = re.compile(REGEX,  re.IGNORECASE| re.DOTALL)
-    return obj.search(query).groups()
+    if obj:
+        return obj.search(query).groups()
+    else:
+        print "Some error passed"
+        sys.exit(1)
 
 def notify( summary, desc , warning = True):
     print "%s - %s " % ( summary, desc)
