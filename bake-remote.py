@@ -9,7 +9,7 @@ reps=sys.argv[1:]
 recipe=""
 
 for r in reps:
-    recipe += "%s{x86} %s{x86_64}" % ( r, r)
+    recipe += " %s{x86} %s{x86_64} " % ( r, r)
 
 cmd["recipes"] = recipe
 enums.notify("Mooking", ",".join(reps))
